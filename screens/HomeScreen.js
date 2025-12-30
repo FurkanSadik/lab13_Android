@@ -8,7 +8,10 @@ export default function HomeScreen({ navigation }) {
       <Button title="Kamera" onPress={() => navigation.navigate('Camera')} />
       <Button title="Galeri" onPress={() => navigation.navigate('Gallery')} />
       <Button title="Konum" onPress={() => navigation.navigate('Location')} />
-      <Button title="Bildirimler & Titreşim" onPress={() => navigation.navigate('Haptics')} />
+      <Button
+        title="Titreşim Örnekleri"
+        onPress={() => navigation.navigate('Haptics')}
+      />
     </View>
   );
 }
