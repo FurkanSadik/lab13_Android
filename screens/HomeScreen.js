@@ -5,40 +5,10 @@ export default function HomeScreen({ navigation }) {
     <View style={styles.container}>
       <Text style={styles.title}>Cihaz Özellikleri Uygulaması</Text>
 
-      <View style={styles.buttonContainer}>
-        <Button
-          title="Kamera"
-          onPress={() => navigation.navigate('Camera')}
-        />
-      </View>
-
-      <View style={styles.buttonContainer}>
-        <Button
-          title="Galeri"
-          onPress={() => navigation.navigate('Gallery')}
-        />
-      </View>
-
-      <View style={styles.buttonContainer}>
-        <Button
-          title="Konum"
-          onPress={() => navigation.navigate('Location')}
-        />
-      </View>
-
-      <View style={styles.buttonContainer}>
-        <Button
-          title="Bildirimler"
-          onPress={() => navigation.navigate('Notifications')}
-        />
-      </View>
-
-      <View style={styles.buttonContainer}>
-        <Button
-          title="Haptics"
-          onPress={() => navigation.navigate('Haptics')}
-        />
-      </View>
+      <Button title="Kamera" onPress={() => navigation.navigate('Camera')} />
+      <Button title="Galeri" onPress={() => navigation.navigate('Gallery')} />
+      <Button title="Konum" onPress={() => navigation.navigate('Location')} />
+      <Button title="Bildirimler & Titreşim" onPress={() => navigation.navigate('Haptics')} />
     </View>
   );
 }
@@ -46,16 +16,14 @@ export default function HomeScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 24,
-    paddingTop: 48
+    padding: 20,
+    justifyContent: 'center',
+    gap: 14
   },
   title: {
-    fontSize: 20,
+    textAlign: 'center',
+    fontSize: 22,
     fontWeight: '600',
-    marginBottom: 24,
-    textAlign: 'center'
-  },
-  buttonContainer: {
-    marginVertical: 6
+    marginBottom: 22
   }
 });
